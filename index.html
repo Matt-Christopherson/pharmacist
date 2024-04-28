@@ -63,6 +63,7 @@
 
         #pill-bottle-container {
             display: flex;
+            
         }
 
         #pill-bottle {
@@ -73,6 +74,7 @@
         #pill-bottle-art {
     white-space: pre;
     margin-right: 20px;
+    
 }
 
 #man-image {
@@ -90,6 +92,13 @@
     background-color: 	#560e07 !important; 
         color: #fff; /* White text color */
     
+}
+
+#wrong-guess-label {
+    font-family: "Micro 5", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 32px;
 }
 
 
@@ -118,7 +127,7 @@
         <div id="pill-bottle-container">
             <div id="pill-bottle">
                 <pre id="pill-bottle-art">
-                   <b><u>WRONG GUESSES:</u></b>
+                   <span id="wrong-guess-label"><b><u>WRONG GUESSES:</u></b></span>
 
                    {_________}
                     )=======(
