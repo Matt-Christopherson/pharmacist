@@ -13,12 +13,14 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jacquarda+Bastarda+9&family=Micro+5&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12+Charted&family=Jacquarda+Bastarda+9&family=Micro+5&display=swap"
+        rel="stylesheet">
 
     <style>
         header {
@@ -63,7 +65,7 @@
 
         #pill-bottle-container {
             display: flex;
-            
+
         }
 
         #pill-bottle {
@@ -72,36 +74,39 @@
         }
 
         #pill-bottle-art {
-    white-space: pre;
-    margin-right: 20px;
-    
-}
+            white-space: pre;
+            margin-right: 20px;
 
-#man-image {
-    max-width: 400px;
-    max-height: 400px;
-}
-    /* Add this style to change the color of letter buttons */
-    .btn-primary {
-        background-color: 	#740707 !important; 
-        color: #fff; /* White text color */
-        border-color: #740707; /* Blue border color */
-    }
-#bullshit-paragraph {
-    margin-bottom: 20px;
-    background-color: 	#560e07 !important; 
-        color: #fff; /* White text color */
-    
-}
+        }
 
-#wrong-guess-label {
-    font-family: "Micro 5", sans-serif;
+        #man-image {
+            max-width: 400px;
+            max-height: 400px;
+        }
+
+        /* Add this style to change the color of letter buttons */
+        .btn-primary {
+            background-color: #740707 !important;
+            color: #fff;
+            /* White text color */
+            border-color: #740707;
+            /* Blue border color */
+        }
+
+        #bullshit-paragraph {
+            margin-bottom: 20px;
+            background-color: #560e07 !important;
+            color: #fff;
+            /* White text color */
+
+        }
+
+        #wrong-guess-label {
+            font-family: "Micro 5", sans-serif;
             font-weight: 400;
             font-style: normal;
             font-size: 32px;
-}
-
-
+        }
     </style>
 </head>
 
@@ -159,17 +164,18 @@
     <script>
         // List of words for the game
         const words = [
-            "Acetaminophen", "Adderall", "Amitriptyline", "Amlodipine", "Amoxicillin", "Ativan", "Atorvastatin",
-            "Azithromycin", "Benzonatate", "Brilinta", "Bunavail", "Buprenorphine", "Cephalexin", "Ciprofloxacin",
-            "Citalopram", "Clindamycin", "Clonazepam", "Cyclobenzaprine", "Cymbalta", "Doxycycline", "Dupixent",
-            "Entresto", "Entyvio", "Farxiga", "Fentanyl Patch", "Gabapentin", "Gilenya", "Humira", "Hydrochlorothiazide",
-            "Hydroxychloroquine", "Ibuprofen", "Imbruvica", "Invokana", "Januvia", "Jardiance", "Kevzara", "Leqvio",
-            "Lexapro", "Lisinopril", "Lofexidine", "Loratadine", "Lyrica", "Melatonin", "Meloxicam", "Metformin",
-            "Methadone", "Methotrexate", "Metoprolol", "Mounjaro", "Naloxone", "Naltrexone", "Naproxen", "Narcan",
-            "Nurtec", "Omeprazole", "Onpattro", "Otezla", "Ozempic", "Pantoprazole", "Plan B", "Prednisone", "Probuphine",
-            "Rybelsus", "Secukinumab", "Sublocade", "Tramadol", "Trazodone", "Viagra", "Wegovy", "Wellbutrin", "Xanax",
-            "Zubsolv"
+            "acetaminophen", "adderall", "amitriptyline", "amlodipine", "amoxicillin", "ativan", "atorvastatin",
+            "azithromycin", "benzonatate", "brilinta", "bunavail", "buprenorphine", "cephalexin", "ciprofloxacin",
+            "citalopram", "clindamycin", "clonazepam", "cyclobenzaprine", "cymbalta", "doxycycline", "dupixent",
+            "entresto", "entyvio", "farxiga", "fentanyl patch", "gabapentin", "gilenya", "humira", "hydrochlorothiazide",
+            "hydroxychloroquine", "ibuprofen", "imbruvica", "invokana", "januvia", "jardiance", "kevzara", "leqvio",
+            "lexapro", "lisinopril", "lofexidine", "loratadine", "lyrica", "melatonin", "meloxicam", "metformin",
+            "methadone", "methotrexate", "metoprolol", "mounjaro", "naloxone", "naltrexone", "naproxen", "narcan",
+            "nurtec", "omeprazole", "onpattro", "otezla", "ozempic", "pantoprazole", "plan b", "prednisone", "probuphine",
+            "rybelsus", "secukinumab", "sublocade", "tramadol", "trazodone", "viagra", "wegovy", "wellbutrin", "xanax",
+            "zubsolv"
         ];
+
 
         // Initialize variables
         let selectedWord = "";
@@ -254,23 +260,23 @@
         }
 
         // Function to update the image based on the number of remaining guesses
-function updateImage() {
-    const image = document.getElementById("man-image");
-    // Determine the image URL based on the remaining guesses
-    if (remainingGuesses === 5) {
-        image.src = "assets/dying-man-1.png";
-    } else if (remainingGuesses === 4) {
-        image.src = "assets/dying-man-2.png";
-    } else if (remainingGuesses === 3) {
-        image.src = "assets/dying-man-3.png";
-    } else if (remainingGuesses === 2) {
-        image.src = "assets/dying-man-4.png";
-    } else if (remainingGuesses === 1) {
-        image.src = "assets/dying-man-5.png";
-    } else if (remainingGuesses === 0) {
-        image.src = "assets/dying-man-6.png";
-    }
-}
+        function updateImage() {
+            const image = document.getElementById("man-image");
+            // Determine the image URL based on the remaining guesses
+            if (remainingGuesses === 5) {
+                image.src = "assets/dying-man-1.png";
+            } else if (remainingGuesses === 4) {
+                image.src = "assets/dying-man-2.png";
+            } else if (remainingGuesses === 3) {
+                image.src = "assets/dying-man-3.png";
+            } else if (remainingGuesses === 2) {
+                image.src = "assets/dying-man-4.png";
+            } else if (remainingGuesses === 1) {
+                image.src = "assets/dying-man-5.png";
+            } else if (remainingGuesses === 0) {
+                image.src = "assets/dying-man-6.png";
+            }
+        }
 
         // Function to update the displayed word with guessed letters
         function updateWord() {
