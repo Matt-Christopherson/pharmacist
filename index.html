@@ -43,14 +43,20 @@
         }
 
         #word-container {
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
         #guesses-left {
+            display: flex;
+            justify-content: center;
             margin-bottom: 10px;
         }
 
         #letters {
+            display: flex;
+            justify-content: center;
             margin-bottom: 20px;
         }
 
@@ -65,7 +71,7 @@
 
         #pill-bottle-container {
             display: flex;
-
+            justify-content: center;
         }
 
         #pill-bottle {
@@ -132,19 +138,18 @@
         <div id="pill-bottle-container">
             <div id="pill-bottle">
                 <pre id="pill-bottle-art">
-                   <span id="wrong-guess-label"><b><u>WRONG GUESSES:</u></b></span>
-
-                   {_________}
-                    )=======(
-                   /         \
-                  | _________ |
-                  ||   _     ||
-                  ||  |_)    ||
-                  ||  | \/   ||
-                  ||    /\   ||
-                  ||</span><span id="wrong-guesses"></span>  ||
-                  |'---------'|
-                  `-.........-'
+<span id="wrong-guess-label"><b><u>WRONG GUESSES:</u></b></span>
+ {_________}
+  )=======(
+ /         \
+| _________ |
+||   _     ||
+||  |_)    ||
+||  | \/   ||
+||    /\   ||
+||</span><span id="wrong-guesses"></span>  ||
+|'---------'|
+`-.........-'
                 </pre>
                 <!-- <img src="assets/dying-man.png" id="man-image"> -->
             </div>
